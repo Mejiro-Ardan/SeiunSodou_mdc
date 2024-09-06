@@ -50,10 +50,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Set npm registry to npmjs
-        run: npm config set registry https://registry.npmjs.org/
-
       - name: Publish to npm
-        run: npm publish --provenance --access public
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
