@@ -17,5 +17,7 @@ export default defineNuxtConfig({
     },
     strict: true,
     includeWorkspace: true
-  }
+  },
+
+  modules: ['@nuxtjs/tailwindcss']
 })
