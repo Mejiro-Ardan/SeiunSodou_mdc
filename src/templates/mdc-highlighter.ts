@@ -17,7 +17,7 @@ export async function mdcHighlighter({
   }
 }) {
   if (!options || !options.highlighter)
-    return 'export default () => { throw new Error(\'[@nuxtjs/mdc] No highlighter specified\') }'
+    return 'export default () => { throw new Error(\'[seiunsodou_mdc] No highlighter specified\') }'
 
   if (options.highlighter === 'shiki') {
     const file = [
@@ -26,7 +26,7 @@ export async function mdcHighlighter({
     ].find(file => existsSync(file))
 
     if (!file)
-      throw new Error(`[@nuxtjs/mdc] Could not find shiki highlighter: ${shikiPath}`)
+      throw new Error(`[seiunsodou_mdc] Could not find shiki highlighter: ${shikiPath}`)
 
     let code = await fs.readFile(file, 'utf-8')
 
@@ -49,7 +49,7 @@ export async function mdcHighlighter({
       if (typeof lang === 'string') {
         const info = bundledLanguagesInfo.find(i => i.aliases?.includes?.(lang) || i.id === lang)
         if (!info) {
-          throw new Error(`[@nuxtjs/mdc] Could not find shiki language: ${lang}`)
+          throw new Error(`[seiunsodou_mdc] Could not find shiki language: ${lang}`)
         }
         langsMap.set(info.id, info.id)
         for (const alias of info.aliases || []) {
@@ -101,7 +101,7 @@ export async function mdcHighlighter({
       '      return config.highlighter(...args)',
       '    }',
       '  }',
-      '  throw new Error(\'[@nuxtjs/mdc] No custom highlighter specified\')',
+      '  throw new Error(\'[seiunsodou_mdc] No custom highlighter specified\')',
       '}'
     ].join('\n')
   }

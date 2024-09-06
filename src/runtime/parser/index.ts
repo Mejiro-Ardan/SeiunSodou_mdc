@@ -3,7 +3,7 @@ import remarkParse from 'remark-parse'
 import remark2rehype from 'remark-rehype'
 import { parseFrontMatter } from 'remark-mdc'
 import { defu } from 'defu'
-import type { MdcConfig, MDCData, MDCElement, MDCParseOptions, MDCParserResult, MDCRoot, Toc } from '@nuxtjs/mdc'
+import type { MdcConfig, MDCData, MDCElement, MDCParseOptions, MDCParserResult, MDCRoot, Toc } from 'seiunsodou_mdc'
 import { nodeTextContent } from '../utils/node'
 import { useProcessorPlugins } from './utils/plugins'
 import { defaults } from './options'
@@ -31,7 +31,7 @@ export const createMarkdownParser = async (inlineOptions: MDCParseOptions = {}) 
   // TODO: remove the passing in @nuxt/content and then we could remove this line
   if (inlineOptions.highlight != null && inlineOptions.highlight != false && inlineOptions.highlight.highlighter !== undefined && typeof inlineOptions.highlight.highlighter !== 'function') {
     if (import.meta.dev)
-      console.warn('[@nuxtjs/mdc] `highlighter` passed to `parseMarkdown` is should be a function, but got ' + JSON.stringify(inlineOptions.highlight.highlighter) + ', ignored.')
+      console.warn('[seiunsodou_mdc] `highlighter` passed to `parseMarkdown` is should be a function, but got ' + JSON.stringify(inlineOptions.highlight.highlighter) + ', ignored.')
     inlineOptions = {
       ...inlineOptions,
       highlight: {

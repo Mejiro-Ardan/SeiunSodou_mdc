@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     tsConfig: {
       compilerOptions: {
         paths: {
-          '@nuxtjs/mdc/config': [
+          'seiunsodou_mdc/config': [
             fileURLToPath(new URL('./src/config.ts', import.meta.url))
           ]
         }

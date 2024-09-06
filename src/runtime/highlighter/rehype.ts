@@ -1,7 +1,7 @@
 import type { Root, Element } from 'hast'
 import { visit } from 'unist-util-visit'
 import { toString } from 'hast-util-to-string'
-import type { RehypeHighlightOption } from '@nuxtjs/mdc'
+import type { RehypeHighlightOption } from 'seiunsodou_mdc'
 
 export default rehypeHighlight
 

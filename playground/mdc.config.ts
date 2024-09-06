@@ -1,4 +1,4 @@
-import { defineConfig } from '@nuxtjs/mdc/config'
+import { defineConfig } from 'seiunsodou_mdc/config'
 
 export default defineConfig({
 })

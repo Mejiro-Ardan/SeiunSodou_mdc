@@ -29,7 +29,7 @@ export const DefaultHighlightLangs: BundledLanguage[] = [
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: '@nuxtjs/mdc',
+    name: 'seiunsodou_mdc',
     configKey: 'mdc'
   },
   // Default configuration options of the Nuxt module
@@ -187,7 +187,7 @@ export default defineNuxtModule<ModuleOptions>({
         'debug' // deps by many libraries but it's not an ESM
       ]
       const exclude = [
-        '@nuxtjs/mdc' // package itself, it's a build time module
+        'seiunsodou_mdc' // package itself, it's a build time module
       ]
       config.optimizeDeps ||= {}
       config.optimizeDeps.exclude ||= []
@@ -195,7 +195,7 @@ export default defineNuxtModule<ModuleOptions>({
 
       for (const pkg of include) {
         if (!config.optimizeDeps.include.includes(pkg)) {
-          config.optimizeDeps.include.push('@nuxtjs/mdc > ' + pkg)
+          config.optimizeDeps.include.push('seiunsodou_mdc > ' + pkg)
         }
       }
 
